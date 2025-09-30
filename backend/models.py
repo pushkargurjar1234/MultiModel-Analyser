@@ -1,6 +1,7 @@
 
 from transformers import pipeline  #type: ignore
 from ultralytics import YOLO
+import os
 
 def load_models():
     """Load all ml  models and return them as dictionary"""
@@ -19,8 +20,10 @@ def load_models():
     # image_classifier = pipeline("image-classification", model="google/vit-base-patch16-224")
     
 
-    image_classifier=YOLO("yolov8n-cls.pt")
+    # image_classifier=YOLO("yolov8n-cls.pt")
 
+    yolo_model_path = os.getenv("YOLO_MODEL_PATH", "backend/yolov8n-cls.pt")
+    image_classifier = YOLO(yolo_model_path)
     
 
 
