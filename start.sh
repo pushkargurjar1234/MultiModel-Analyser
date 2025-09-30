@@ -1,3 +1,7 @@
 #!/bin/bash
-uvicorn backend.main:app --host 0.0.0.0 --port $PORT
 
+# Move into backend folder
+cd backend
+
+# Run FastAPI app with uvicorn
+uvicorn main:app --host 0.0.0.0 --port $PORT
