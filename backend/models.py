@@ -18,10 +18,7 @@ def load_models():
     device_map="auto",
     load_in_8bit=True   # <- quantized 
     )
-    sentiment_analyzer = pipeline(
-    "sentiment-analysis",
-    model=model,
-    tokenizer=tokenizer)
+    sentiment_analyzer = pipeline("sentiment-analysis",model=model,tokenizer=tokenizer)
 
 
     summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-6-6")
