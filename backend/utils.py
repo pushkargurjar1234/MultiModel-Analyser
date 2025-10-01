@@ -8,9 +8,6 @@ pytesseract.pytesseract.tesseract_cmd = os.getenv(
     r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 )
 
-
-
-
 # pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 # function for analysis
